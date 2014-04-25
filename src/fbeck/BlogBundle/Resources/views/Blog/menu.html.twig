@@ -1,0 +1,9 @@
+{# src/fbeck/BlogBundle/Resources/views/Blog/menu.html.twig #}
+
+<h2>Recent awesome posts</h2>
+
+<ul class="nav nav-pills nav-stacked">
+  {% for article in liste_articles %}
+    <li><a href="{{ path('fbeck_blog_view', {'id': article.id}) }}">{{ article.titre }}</a></li>
+  {% endfor %}
+</ul>

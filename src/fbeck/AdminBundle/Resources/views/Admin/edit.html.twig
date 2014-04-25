@@ -1,0 +1,20 @@
+{# src/fbeck/AdminBundle/Resources/views/Home/edit.html.twig #}
+
+{% extends "fbeckAdminBundle::layout.html.twig" %}
+
+{% block fbeck_admin_body %}
+<h2>Edit user {{ user.id }} - {{ user.username }}</h2>
+
+<form method='post' class="user" name="admin_edit" action="{{ path('fbeck_admin_edit', {'id': id, 'user': user})}}">
+	<fieldset>
+		{{ form_widget(form) }}
+
+		<button type="submit" name="submit" value="AWESOME"class="btn"> Submit </button>
+	</fieldset>
+</form>
+    <a href="{{ path('fbeck_admin_homepage') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Back to the list
+    </a>
+
+{% endblock %}
