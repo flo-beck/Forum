@@ -34,27 +34,8 @@
         <span><a href="{{ path('fos_user_security_login') }}">Log in</a></span>
       {% endif %}
       </div>
-
-      <div class="row-fluid">
-        <div id="menu" class="span3 box">
-          <div>
-            <h2>The Blog</h2>
-            <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('fbeck_blog_home') }}">Blog home</a></li>
-              <li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>
-            </ul>
-                      
-            {{ render(controller("fbeckBlogBundle:Blog:menu", {'nombre': 3})) }}
-          <a class="contact" href="{{ path('fbeck_home_contact') }}"><p>Contact us!</p></a>
-          </div>
-        </div>
-        <div id="content" class="span9">
-          <div class="main_body">
             {% block body %}
             {% endblock %}
-          </div>
-        </div>
-      </div>
 
       <hr>
 

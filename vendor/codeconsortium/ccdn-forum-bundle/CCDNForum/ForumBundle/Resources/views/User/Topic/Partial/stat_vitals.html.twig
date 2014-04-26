@@ -1,10 +1,10 @@
 {%- spaceless -%}
 
 	<header class="row clearfix">
-		<div class="col-md-6">
+		<div class="span6">
 		    <span class="lead" title="{{- topic.getTitle -}}">{{- topic.getTitle |capitalize -}}</span>
 		</div>
-		<div class="col-md-6 text-right">
+		<div class="span6 text-right">
 		    <span class="label label-default" title="{{- topic.cachedReplyCount -}}">
 				{{- 'topic.reply-count-label' |trans({}, 'CCDNForumForumBundle') -}}
 				{{- topic.cachedReplyCount -}}

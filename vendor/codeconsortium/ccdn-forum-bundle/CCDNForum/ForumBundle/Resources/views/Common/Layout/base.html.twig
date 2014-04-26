@@ -26,13 +26,13 @@
 
 				<div class="container clearfix">
 					<div class="row" style="padding:10px 0;">
-						<div class="col-md-2">
+						<div class="span2">
 							{% block sub_title %}
 								{%- include 'CCDNForumForumBundle:Common:Layout/SubTitle/sub_title_default.html.twig' -%}
 							{% endblock sub_title %}
 						</div>
 
-						<div class="col-md-10">
+						<div class="span10">
 							<div class="row">
 								{%- block crumb_trail -%}
 									{%- if crumbs is defined -%}
@@ -62,7 +62,7 @@
 
 
 
-{% block body %}
+{% block body_forum %}
 	{%- spaceless -%}
 
     {%- include 'CCDNForumForumBundle:Common:Layout/flashes.html.twig' -%}
@@ -77,4 +77,4 @@
 	{%- endblock body_footer -%}
 
 	{%- endspaceless -%}
-{% endblock body %}
+{% endblock body_forum %}

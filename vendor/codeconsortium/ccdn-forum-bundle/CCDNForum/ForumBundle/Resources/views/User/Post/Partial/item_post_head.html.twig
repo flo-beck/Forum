@@ -1,7 +1,7 @@
 {%- spaceless -%}
 
 	<div class="row clearfix">
-	    <div class="col-md-7">
+	    <div class="span7">
 			<h3 class="panel-title">
 				{%- if post.getCreatedBy -%}
 			        {{- 'post.posted-by' |trans({}, 'CCDNForumForumBundle') |raw -}}
@@ -17,7 +17,7 @@
 			</h3>
 	    </div>
 
-	    <div class="col-md-5 pull-right text-right">
+	    <div class="span5 pull-right text-right">
 	        {% if post.id and not post.isDeleted %}
 	            <div class="btn-group">
 	                <a class="btn btn-xs btn-icon-only" title="show post"
