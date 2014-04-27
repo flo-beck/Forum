@@ -3,22 +3,22 @@
 {% extends "fbeckBlogBundle::layout.html.twig" %}
 
 {% block title %}
-  Home - {{ parent() }}
+  {{ 'blog.home'|trans }} - {{ parent() }}
 {% endblock %}
 
 {% block fbeck_blog_body %}
 
-  <h2>List of awesome-cool blog posts</h2>
+  <h2>{{ 'blog.list.title'|trans }}</h2>
 
   <ul>
     {% for article in articles %}
       <li>
         <a href="{{ path('fbeck_blog_view', {'id': article.id}) }}">{{ article.titre }}</a>
-        par {{ article.auteur }},
-        le {{ article.date|date('d/m/Y') }}
+        {{ 'blog.list.by'|trans }} {{ article.auteur }},
+        {{ 'blog.list.the'|trans }} {{ article.date|date('d/m/Y') }}
       </li>
     {% else %}
-      <li>Pas (encore !) d'articles</li>
+      <li>{{ 'blog.list.none'|trans }}</li>
     {% endfor %}
   </ul>
 

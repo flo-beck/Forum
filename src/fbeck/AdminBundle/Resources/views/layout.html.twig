@@ -11,30 +11,29 @@
 <div class="row-fluid">
         <div id="menu" class="span3 box">
           <div>
-            <h2>The Blog</h2>
+            <h2>Blog</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('fbeck_blog_home') }}">Blog home</a></li>
-              <li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>
+              <li><a href="{{ path('fbeck_blog_home') }}">{{ 'sidebar.blog.home'|trans }}</a></li>
+              <li><a href="{{ path('fbeck_blog_add') }}">{{ 'sidebar.blog.add'|trans }}</a></li>
             </ul>
                       
             {#{{ render(controller("fbeckBlogBundle:Blog:menu", {'nombre': 3})) }}#}
           </div>
           <div>
-            <h2>The Forum</h2>
+            <h2>Forum</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('ccdn_forum_user_category_index') }}">Forum home</a></li>
-              {#<li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>#}
+              <li><a href="{{ path('ccdn_forum_user_category_index') }}">{{ 'sidebar.forum.home'|trans }}</a></li>
             </ul>
           </div>
           <div>
-            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>Contact</h2></a>
+            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>{{ 'sidebar.contact'|trans }}</h2></a>
           </div>
         </div>
         <div id="content" class="span9">
           <div class="main_body">
 
   {# On définit un sous-titre commun à toutes les pages du bundle, par exemple #}
-  <h1>Awesome Admin Area</h1>
+  <h1>{{ 'title.admin'|trans }}</h1>
 
   <hr>
 

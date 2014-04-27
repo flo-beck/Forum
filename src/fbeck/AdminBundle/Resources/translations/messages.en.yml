@@ -1,0 +1,33 @@
+
+sidebar:
+    blog:
+        home:    "Blog home"
+        add:    "Add an article"
+    forum:
+        home:    "Forum home"
+    contact:     "Contact"
+
+site:
+    title:    "Awesome Things"
+    msg1:    "The site about awesome things.  If it's awesome, it's on here.  If it's not on here, it's not awesome. "
+    msg2:    "Simple as."
+
+title:
+    admin:    "Awesome Admin Area"
+
+list:
+    back:    "Back to the list"
+    title:    "List of all our awesome users"
+
+view:
+    back:    "Back to the list"
+    edit:    "Edit user"
+    delete:    "Delete this user"
+    user:    "User"
+    username:    "Username "
+    email:    "Email"
+    roles:    "Roles"
+
+logged_as:    "Logged in as"
+logout:    "Logout"
+log_in:    "Log in"

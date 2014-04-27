@@ -1,0 +1,42 @@
+home:
+    title:    "La Maison de Awesomeness"
+    logged_welcome:    "Bienvenu "
+    logged_msg:    "! Savez vous? "
+    unlogged_msg:    "Rien est awesome pour vous ... pas encore! Essayez de vous connecter ou visitez le blog home"
+
+site:
+    title:    "Trucs Awesomes"
+    msg1:    "Le site des choses awesome. Si c'est awesome, c'est ici. Si ce n'est pas ici, ce n'est pas awesome. "
+    msg2:    "Simple."
+
+logged_as:    "Connecté en tant que"
+logout:    "Déconnectez"
+log_in:    "Connectez-vous"
+
+sidebar:
+    blog:
+        home:    "Blog acceuil"
+        add:    "Ajouter un article"
+    forum:
+        home:    "Forum acceuil"
+        contact:     "Contact"
+title:
+    admin:    "Domaine d'Admin trop Awesome"
+list:
+    back:    "Retour à la liste"
+    title:    "Liste de tous nos utilisateurs trop awesome"
+
+contact:
+    title:    "Contactez nous!"
+    logged_msg:    "Contactez Awesomeness"
+    form:
+        name:    "Nom"
+        email:    "Mail"
+        subject:    "Sujet"
+        subjects:
+            sugg:    "Suggestion"
+            err:    "Ereur technique (impossible)"
+            change:    "OMG changez la musique"
+            other:    "Autre"
+        message:    "Votre message"
+        send:    "Envoyer"

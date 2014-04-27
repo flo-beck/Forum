@@ -25,6 +25,11 @@
  	font-size: 100px;
  }
 
+ .main_body h1 {
+ 	line-height: 80%;
+	text-align: center;
+ }
+
 h2 {
 	font-family: main;
 	font-size: 50px;

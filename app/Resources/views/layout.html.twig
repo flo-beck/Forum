@@ -1,5 +1,7 @@
 {# app/Resources/views/layout.html.twig #}
 
+{% trans_default_domain 'messages' %}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,21 +19,24 @@
   <body>
     <div class="container">
       <div id="header" class="hero-unit box">
-        <a href="{{ path('fbeck_home_home') }}"><h1>Awesome Things</h1></a>
-        <p>The site about awesome things.  If it's awesome, it's on here.  If it's not on here, it's not awesome. </br> Simple as. </p>
-        {#<p><a class="btn btn-primary btn-large" href="http://www.siteduzero.com/informatique/tutoriels/developpez-votre-site-web-avec-le-framework-symfony2">
-          Lire le tutoriel »
-        </a></p>#}
+        <a href="{{ path('fbeck_home_home') }}"><h1>{{ 'site.title'|trans }}</h1></a>
+        <p>{{ 'site.msg1'|trans }}</br>{{ 'site.msg2'|trans }} </p>
+        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params') | merge({ '_locale':'fr' })) }}">
+          <img width="33px" class="navbar-btn navbar-right" {%if app.request.locale == "en" %}style="opacity:0.3;"{% endif %} src="{{ asset('/img/fr.jpg') }}" />
+        </a>
+        <a href="{{ path(app.request.get('_route'), app.request.get('_route_params') | merge({ '_locale':'en' })) }}">
+          <img width="33px" class="navbar-btn navbar-right" {%if app.request.locale == "fr" %}style="opacity:0.3;margin-right:10px;"{% else %} style="margin-right:10px;"{% endif %} src="{{ asset('/img/en.jpg') }}" />
+        </a>
       </div>
 
       <div class="status box">
       {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <span>Logged in as {{ app.user.username }} </span> <span> <a href="{{ path('fos_user_security_logout') }}">Log out</a> </span>
+        <span>{{ 'logged_as'|trans }} {{ app.user.username }} </span> <span> <a href="{{ path('fos_user_security_logout') }}">{{ 'logout'|trans }}</a> </span>
         {% if is_granted("ROLE_ADMIN") %}
           <span><a href="{{ path('fbeck_admin_homepage') }}">Admin</a></span>
         {% endif %}
       {% else %}
-        <span><a href="{{ path('fos_user_security_login') }}">Log in</a></span>
+        <span><a href="{{ path('fos_user_security_login') }}">{{ 'log_in'|trans }}</a></span>
       {% endif %}
       </div>
             {% block body %}

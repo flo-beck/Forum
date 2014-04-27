@@ -3,13 +3,13 @@
 {% extends "fbeckBlogBundle::layout.html.twig" %}
 
 {% block title %}
-  Lecture d'un article - {{ parent() }}
+  {{ 'blog.view.title'|trans }} - {{ parent() }}
 {% endblock %}
 
 {% block fbeck_blog_body %}
 
   <h2>WOOP{{ article.titre }}</h2>
-  <i>Par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}</i>
+  <i>{{ 'blog.list.byM'|trans }} {{ article.auteur }}, {{ 'blog.list.the'|trans }} {{ article.date|date('d/m/Y') }}</i>
 
   <div class="well">
     {{ article.contenu }}
@@ -18,15 +18,15 @@
   <p>
     <a href="{{ path('fbeck_blog_home') }}" class="btn">
       <i class="icon-chevron-left"></i>
-      Retour à la liste
+      {{ 'blog.view.back'|trans }}
     </a>
     <a href="{{ path('fbeck_blog_edit', {'id': article.id}) }}" class="btn">
       <i class="icon-edit"></i>
-      Modifier l'article
+      {{ 'blog.view.edit'|trans }}
     </a>
     {#<a href="{{ path('fbeck_blog_delete', {'id': article.id}) }}" class="btn">
       <i class="icon-trash"></i>
-      Supprimer l'article
+      {{ 'blog.view.delete'|trans }}
     </a>#}
   </p>
 

@@ -1,0 +1,51 @@
+sidebar:
+    blog:
+        home:    "Blog home"
+        add:    "Add an article"
+    forum:
+        home:    "Forum home"
+    contact:     "Contact"
+
+title:
+    admin:    "Awesome Admin Area"
+
+list:
+    back:    "Back to the list"
+    title:    "List of all our awesome users"
+
+view:
+    back:    "Back to the list"
+    edit:    "Edit user"
+    delete:    "Delete this user"
+    user:    "User"
+    username:    "Username "
+    email:    "Email"
+    roles:    "Roles"
+
+logged_as:    "Logged in as"
+logout:    "Logout"
+log_in:    "Log in"
+
+blog:
+    title:    "Blog of Awesome"
+    home:    "Home"
+    recent:    "Recent awesome posts"
+    edit:
+        title:    "Edit an article"
+        msg:    "You are editing an existing article - careful not to change too much so our members can still follow the thread!"
+        back:    "Back to the article"
+        form:
+            title:    "Article Form"
+            msg:    "Form here..."
+    list:
+        title:    "List of awesome-cool blog posts"
+        the:    "the"
+        by:    "by"
+        byM:    "By"
+        none:    "No articles (yet)"
+    view:
+        title:    "Read a Post"
+        back:    "Back to the list"
+        edit:    "Edit post"
+        delete:    "Delete post"
+

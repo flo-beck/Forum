@@ -1,0 +1,42 @@
+home:
+    title:    "The Home of Awesomeness"
+    logged_welcome:    "Welcome "
+    logged_msg:    "! Did you know? "
+    unlogged_msg:    "Nothing is awesome for you...yet! try logging in. Or visit the blog home"
+
+logged_as:    "Logged in as"
+logout:    "Logout"
+log_in:    "Log in"
+
+site:
+    title:    "Awesome Things"
+    msg1:    "The site about awesome things.  If it's awesome, it's on here.  If it's not on here, it's not awesome. "
+    msg2:    "Simple as."
+
+sidebar:
+    blog:
+        home:    "Blog home"
+        add:    "Add an article"
+    forum:
+        home:    "Forum home"
+        contact:         "Contact"
+title:
+    admin:    "Awesome Admin Area"
+list:
+    back:    "Back to the list"
+    title:    "List of all our awesome users"
+
+contact:
+    title:    "Contact us!"
+    logged_msg:    "Contact some Awesomeness"
+    form:
+        name:    "Name: "
+        email:    "Email: "
+        subject:    "Subject: "
+        subjects:
+            sugg:    "Awesome suggestion"
+            err:    "Technical error (impossible)"
+            change:    "OMG change the music"
+            other:    "Other"
+        message:    "Your message: "
+        send:    "Send "

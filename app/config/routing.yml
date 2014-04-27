@@ -7,38 +7,56 @@ root:
 fbeck_admin:
     resource: "@fbeckAdminBundle/Resources/config/routing.yml"
     prefix:   /{_locale}/admin
+    requirements:
+        _locale: en|fr 
 
 fbeck_blog:
     resource: "@fbeckBlogBundle/Resources/config/routing.yml"
     prefix:   /{_locale}/blog
+    requirements:
+        _locale: en|fr 
 
 fbeck_home:
     resource: "@fbeckHomeBundle/Resources/config/routing.yml"
     prefix:   /{_locale}/
+    requirements:
+        _locale: en|fr 
 
 fbeck_user:
     resource: "@fbeckUserBundle/Resources/config/routing.yml"
     prefix:   /{_locale}/
+    requirements:
+        _locale: en|fr 
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
     prefix:   /{_locale}/
+    requirements:
+        _locale: en|fr
 
 fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
     prefix: /{_locale}/profile
+    requirements:
+        _locale: en|fr 
 
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
     prefix: /{_locale}/register
+    requirements:
+        _locale: en|fr 
 
 fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
     prefix: /{_locale}/resetting
+    requirements:
+        _locale: en|fr 
 
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /{_locale}/profile
+    requirements:
+        _locale: en|fr 
 
 CCDNForumForumBundle:
     resource: "@CCDNForumForumBundle/Resources/config/routing.yml"

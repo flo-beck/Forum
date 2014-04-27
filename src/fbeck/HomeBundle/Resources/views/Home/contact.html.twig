@@ -3,36 +3,35 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  Contact some Awesomeness - {{ parent() }}
+  {{ 'contact.logged_msg'|trans }} - {{ parent() }}
 {% endblock %}
 
 {% block body %}
 <div class="row-fluid">
         <div id="menu" class="span3 box">
           <div>
-            <h2>The Blog</h2>
+            <h2>Blog</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('fbeck_blog_home') }}">Blog home</a></li>
-              <li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>
+              <li><a href="{{ path('fbeck_blog_home') }}">{{ 'sidebar.blog.home'|trans }}</a></li>
+              <li><a href="{{ path('fbeck_blog_add') }}">{{ 'sidebar.blog.add'|trans }}</a></li>
             </ul>
                       
             {#{{ render(controller("fbeckBlogBundle:Blog:menu", {'nombre': 3})) }}#}
           </div>
           <div>
-            <h2>The Forum</h2>
+            <h2>Forum</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('ccdn_forum_user_category_index') }}">Forum home</a></li>
-              {#<li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>#}
+              <li><a href="{{ path('ccdn_forum_user_category_index') }}">{{ 'sidebar.forum.home'|trans }}</a></li>
             </ul>
           </div>
           <div>
-            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>Contact</h2></a>
+            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>{{ 'sidebar.contact'|trans }}</h2></a>
           </div>
         </div>
         <div id="content" class="span9">
           <div class="main_body">
 
-  <h2>Contact us!</h2>
+  <h2>{{ 'contact.title'|trans }}</h2>
 
   {% if msg|default is not null %}
   	<p> {{ msg }} </p>
@@ -40,33 +39,33 @@
 
   <form method='post' class="contact user form-horizontal" name="contact" action="{{ path('fbeck_home_contact') }}">
 	<div class="control-group">
-		<label class="control-label"> Name: </label>
+		<label class="control-label">{{ 'contact.form.name'|trans }} :</label>
 		<div class="controls">
 			<input type="text" name="name" required="required"> 
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label"> Email: </label>
+		<label class="control-label"> {{ 'contact.form.email'|trans }} :</label>
 		<div class="controls">
 			<input type="text" name="email" required="required"> 
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label"> Subject: </label>
+		<label class="control-label"> {{ 'contact.form.subject'|trans }} :</label>
 		<div class="controls">
 			<select name="subject" required="required">
-				<option>Awesome suggestion</option>
-				<option>Technical error (impossible)</option>
-				<option>OMG change the music</option>
-				<option>Other</option>
+				<option>{{ 'contact.form.subjects.sugg'|trans }}</option>
+				<option>{{ 'contact.form.subjects.err'|trans }} </option>
+				<option>{{ 'contact.form.subjects.change'|trans }}</option>
+				<option>{{ 'contact.form.subjects.other'|trans }}</option>
 			</select>
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label"> Your message: </label>
+		<label class="control-label"> {{ 'contact.form.message'|trans }} :</label>
 		<div class="controls">
 			<textarea name="body" rows="10" required="required"></textarea>
-			<button type="submit" name="submit" value="AWESOME"class="btn"> Send </button>
+			<button type="submit" name="submit" value="AWESOME"class="btn">{{ 'contact.form.send'|trans }} </button>
 		</div>
 	</div>
 	

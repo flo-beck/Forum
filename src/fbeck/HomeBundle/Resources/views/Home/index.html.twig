@@ -3,42 +3,39 @@
 {% extends "::layout.html.twig" %}
 
 {% block title %}
-  The Home of Awesomeness - {{ parent() }}
+  {{ 'home.title'|trans }} - {{ parent() }}
 {% endblock %}
 
 {% block body %}
 <div class="row-fluid">
         <div id="menu" class="span3 box">
           <div>
-            <h2>The Blog</h2>
+            <h2>Blog</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('fbeck_blog_home') }}">Blog home</a></li>
-              <li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>
+              <li><a href="{{ path('fbeck_blog_home') }}">{{ 'sidebar.blog.home'|trans }}</a></li>
+              <li><a href="{{ path('fbeck_blog_add') }}">{{ 'sidebar.blog.add'|trans }}</a></li>
             </ul>
                       
             {#{{ render(controller("fbeckBlogBundle:Blog:menu", {'nombre': 3})) }}#}
           </div>
           <div>
-            <h2>The Forum</h2>
+            <h2>Forum</h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ path('ccdn_forum_user_category_index') }}">Forum home</a></li>
-              {#<li><a href="{{ path('fbeck_blog_add') }}">Add an article</a></li>#}
+              <li><a href="{{ path('ccdn_forum_user_category_index') }}">{{ 'sidebar.forum.home'|trans }}</a></li>
             </ul>
           </div>
           <div>
-            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>Contact</h2></a>
+            <a class="contact" href="{{ path('fbeck_home_contact') }}"><h2>{{ 'sidebar.contact'|trans }}</h2></a>
           </div>
         </div>
         <div id="content" class="span9">
           <div class="main_body">
  {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <p>Welcome {{ app.user.username }} ! Did you know? </p>
+        <p>{{ 'home.logged_welcome'|trans }} {{ app.user.username }} {{ 'home.logged_msg'|trans }}</p>
         <iframe width="640" height="360" src="http://www.youtube.com/embed/oDOog0XS8Qg?rel=0&start=6&end=173&autoplay=0" frameborder="0" allowfullscreen></iframe>
       {% else %}
-        Nothing is awesome for you...yet! try logging in. Or visit the <a href="{{ path('fbeck_blog_home') }}">blog</a>. 
+        {{ 'home.unlogged_msg'|trans }} 
       {% endif %}
-
-      
       </div>
     </div>
   </div>
